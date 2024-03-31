@@ -1,0 +1,9 @@
+.canva {
+  height: "90px";
+}
+.react-pdf__Page__textContent {
+  display: none !important;
+}
+.annotationLayer {
+  display: none !important;
+}
