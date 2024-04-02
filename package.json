@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "opportfolio",
+  "name": "rajportfolio",
   "version": "1.2.0",
-  "homepage": "http://hrishi.tech/",
+  "homepage": "http://RAJNISHMSHRA.github.io/rajnishPortfolio2024",
   "scripts": {
     "build": "react-scripts build",
     "predeploy": "npm run build",
