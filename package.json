@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "rajportfolio",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "homepage": "http://rajnishmshra.github.io/rajnishPortfolio2024",
   "scripts": {
     "build": "react-scripts build",
@@ -18,6 +18,7 @@
     "atropos": "^2.0.2",
     "baseui": "^12.2.0",
     "framer-motion": "^10.9.1",
+    "gh-pages": "^6.1.1",
     "glamor": "^2.20.40",
     "haspr-cursor": "^1.4.92",
     "i": "^0.3.7",
