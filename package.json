@@ -2,7 +2,7 @@
   "private": true,
   "name": "rajportfolio",
   "version": "1.2.0",
-  "homepage": "app.js",
+  "homepage": "http://rajnishmshra.github.io/rajnishPortfolio2024",
   "scripts": {
     "build": "react-scripts build",
     "predeploy": "npm run build",
