@@ -99,6 +99,7 @@ h1 {
 
 form {
   margin-top: 40px;
+  padding: "2%";
   border-radius: 5%;
   background: var(--dark);
 }
@@ -181,3 +182,82 @@ form {
     margin-left: 200px;
   }
 }
+.logoMain {
+  --s: 0.1em !important; /* the thickness of the line */
+  --c: #ffba00 !important; /* the color */
+
+  color: #f5f3efd5;
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, #000 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s;
+}
+.logoMain:hover {
+  --_p: 100%;
+}
+
+.logo-name {
+  color: rgb(192, 255, 250) !important;
+}
+.logoP {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  background: linear-gradient(to bottom, #000, #000 60%, #fff 60%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  transition: background 0.2s ease-out;
+  white-space: nowrap;
+}
+
+.logoSpan {
+  position: relative;
+}
+
+.logoSpan:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: #000;
+  bottom: 9px;
+  transition: all 0.2s ease-out;
+}
+
+.Marqeenote {
+  color: "#FFDA03" !important;
+}
+
+.logoP:hover {
+  background-position: 0 11px;
+}
+
+.logoSpan:hover:before {
+  transform: translateY(10px);
+}
+/* .mainLogo{
+  font-size: 15rem !important ;
+	    text-align: center !important;
+      height:90vh !important;
+      line-height: 90vh !important;
+	    color: #fcedd8!important;
+	    background: #d52e3f;
+	   	font-family: 'Niconne', cursive!important;
+	    font-weight: 700;
+      text-shadow: 5px 5px 0px #eb452b !important, 
+                  10px 10px 0px #efa032, 
+                  15px 15px 0px #46b59b, 
+                  20px 20px 0px #017e7f, 
+                  25px 25px 0px #052939, 
+                  30px 30px 0px #c11a2b, 
+                  35px 35px 0px #c11a2b, 
+                  40px 40px 0px #c11a2b, 
+                  45px 45px 0px #c11a2b;
+} */
