@@ -213,137 +213,138 @@ const ContactForm = () => {
       className="ContactForm"
       style={{ marginBottom: "4%", borderRadius: "5%" }}
     >
-      <div
-        className="container card"
-        ref={ref}
-        style={{ padding: "3%", background: "#040d14" }}
-      >
-        <p style={{ margin: "auto 46%" }}>Gmail Me!</p>
+      <div className="container card" ref={ref} style={{ padding: "3%" }}>
         <div
-          className="row"
+          className="contactForm card"
           style={{
             margin: "auto 10%",
             width: "80%",
-            paddingTop: "5%",
           }}
         >
-          <div className="contactForm" style={{ paddingTop: "4%" }}>
-            <form id="contact-form" onSubmit={sendEmail} noValidate>
-              {/* Row 1 of form */}
-              <MatrixBackground />
-
-              <div className="row formRow">
-                <div className="col-6">
-                  <input
-                    type="text"
-                    name="user_name"
-                    {...register("Name", {
-                      required: {
-                        value: true,
-                        message: "Please enter your name",
-                      },
-                      maxLength: {
-                        value: 30,
-                        message: "Please use 30 characters or less",
-                      },
-                    })}
-                    className="form-control formInput"
-                    placeholder="Name"
-                    style={{ marginRight: "50px" }}
-                  ></input>
-                  {errors.name && (
-                    <span className="errorMessage">{errors.name.message}</span>
-                  )}
-                </div>
-                <div className="col-6">
-                  <input
-                    type="email"
-                    name="user_email"
-                    {...register("email", {
-                      required: true,
-                      pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                    })}
-                    className="form-control formInput"
-                    placeholder="Email address"
-                  ></input>
-                  {errors.email && (
-                    <span className="errorMessage">
-                      Please enter a valid email address
-                    </span>
-                  )}
-                </div>
-              </div>
-              {/* Row 2 of form */}
-              <div className="row formRow">
-                <div className="col">
-                  <input
-                    type="number"
-                    name="phone"
-                    {...register("phone", {
-                      required: {
-                        value: true,
-                        message: "Please enter mobile number",
-                      },
-                      maxLength: {
-                        value: 75,
-                        message: "Subject cannot exceed 75 characters",
-                      },
-                    })}
-                    className="form-control formInput"
-                    placeholder="Phone number"
-                  ></input>
-                  {errors.subject && (
-                    <span className="errorMessage">
-                      {errors.subject.message}
-                    </span>
-                  )}
-                </div>
-              </div>
-              {/* Row 3 of form */}
-              <div className="row formRow">
-                <div className="col">
-                  <textarea
-                    rows={3}
-                    name="message"
-                    {...register("message", {
-                      required: true,
-                    })}
-                    className="form-control formInput"
-                    placeholder="please type your message here..."
-                  ></textarea>
-                  {errors.message && (
-                    <span className="errorMessage">
-                      Please enter delivery information
-                    </span>
-                  )}
-                </div>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <button
-                  className="submit-btn"
-                  disabled={disabled}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </div>
-              <div>
-                <marquee style={{ margin: "auto 20%" }}>
-                  Note:- Message will be delivered to my email
-                  rajnish.misraa@gmail.com
-                </marquee>
-              </div>
-              <p> {stateMessage && <p>{stateMessage}</p>}</p>
-            </form>
+          <div className="gmailMeBox">
+            <h3 className="logoMain">GMAIL ME</h3>
           </div>
-          <ToastContainer />
+          <form
+            id="contact-form"
+            onSubmit={sendEmail}
+            style={{ padding: "2%" }}
+            noValidate
+          >
+            {/* Row 1 of form */}
+            <MatrixBackground />
+
+            <div className="row formRow">
+              <div className="col-6">
+                <input
+                  type="text"
+                  name="user_name"
+                  {...register("Name", {
+                    required: {
+                      value: true,
+                      message: "Please enter your name",
+                    },
+                    maxLength: {
+                      value: 30,
+                      message: "Please use 30 characters or less",
+                    },
+                  })}
+                  className="form-control formInput"
+                  placeholder="Name"
+                  style={{ marginRight: "50px" }}
+                ></input>
+                {errors.name && (
+                  <span className="errorMessage">{errors.name.message}</span>
+                )}
+              </div>
+              <div className="col-6">
+                <input
+                  type="email"
+                  name="user_email"
+                  {...register("email", {
+                    required: true,
+                    pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                  })}
+                  className="form-control formInput"
+                  placeholder="Email address"
+                ></input>
+                {errors.email && (
+                  <span className="errorMessage">
+                    Please enter a valid email address
+                  </span>
+                )}
+              </div>
+            </div>
+            {/* Row 2 of form */}
+            <div className="row formRow">
+              <div className="col">
+                <input
+                  type="number"
+                  name="phone"
+                  {...register("phone", {
+                    required: {
+                      value: true,
+                      message: "Please enter mobile number",
+                    },
+                    maxLength: {
+                      value: 75,
+                      message: "Subject cannot exceed 75 characters",
+                    },
+                  })}
+                  className="form-control formInput"
+                  placeholder="Phone number"
+                ></input>
+                {errors.subject && (
+                  <span className="errorMessage">{errors.subject.message}</span>
+                )}
+              </div>
+            </div>
+            {/* Row 3 of form */}
+            <div className="row formRow">
+              <div className="col textarea">
+                <textarea
+                  rows={3}
+                  name="message"
+                  {...register("message", {
+                    required: true,
+                  })}
+                  className="form-control formInput textareaInp"
+                  placeholder="please type your message here..."
+                ></textarea>
+                {errors.message && (
+                  <span className="errorMessage">
+                    Please enter delivery information
+                  </span>
+                )}
+              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <button className="submit-btn" disabled={disabled} type="submit">
+                Submit
+              </button>
+            </div>
+            <div>
+              <marquee
+                style={{
+                  margin: "auto 20%",
+                  color: "#CFFF04",
+                  fontSize: "14px",
+                }}
+                className="Marqeenote"
+              >
+                Note:- Message will be delivered to my email
+                rajnish.misraa@gmail.com
+              </marquee>
+            </div>
+            <p> {stateMessage && <p>{stateMessage}</p>}</p>
+          </form>
         </div>
+        <ToastContainer />
 
         <span className="top"></span>
         <span className="right"></span>
