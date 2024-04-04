@@ -17,8 +17,8 @@ const greeting = {
   subTitle:
     "Full Stack Developer, Mern stack developer. Always learning new approach.",
   resumeLink:
-    "https://drive.google.com/file/d/1kcvW8P65jWZFeKR6Jopf3nrQLA1qJCwn/view?usp=sharing",
-  mail: "mailto:hrishipatel99@gmail.com",
+    "",
+  mail: "mailto:rajnishmishra204@gmail.com",
 };
 
 const socialMediaLinks = {
@@ -28,7 +28,7 @@ const socialMediaLinks = {
   gmail: "rajnishmishra204@gmail.com",
   gitlab: " ",
   facebook: " ",
-  twitter: "https://twitter.com/hrishi_55",
+  twitter: "https://twitter.com",
   instagram: "https://www.instagram.com/im__rajnishh/",
   // instagram:
   //   "https://www.instagram.com/im__rajnishh?igsh=d2FiMnl2eWU3dmNx&utm_source=qr",
